@@ -1,0 +1,40 @@
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #ed2553;
+    border-color: #ed2553 transparent transparent transparent;
+    border-radius: 50%;
+    animation: loader 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+
+    &:nth-child(1) {
+      animation-delay: -.45s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -.15s;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

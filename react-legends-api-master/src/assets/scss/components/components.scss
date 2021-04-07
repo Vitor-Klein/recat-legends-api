@@ -1,0 +1,162 @@
+//*~ Language
+
+.wrapper_default {
+  max-width: 23rem;
+  width: 90%;
+  height: 13rem;
+
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+
+  background-color: #fff;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .28);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    height: 65%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  &.-column {
+    flex-direction: column;
+
+    p {
+      color: #ed2553;
+      height: 2rem;
+    }
+  }
+}
+
+//*~ List Champions
+
+.wrapper_cards {
+  background-color: #fff;
+  border-radius: .5rem;
+
+  overflow: auto;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .28);
+
+  padding: 1rem;
+  width: 95%;
+  height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.-noScroll {
+    overflow: hidden;
+  }
+
+  .mini_header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .wrapper_cards_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cards {
+      padding: 1rem 1rem;
+      transition: .5s ease;
+      cursor: pointer;
+      opacity: .9;
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        opacity: .8;
+        background-color: #ed2553;
+      }
+
+      &:before {
+        content: '';
+        background-color: #ed2553;
+        position: absolute;
+        height: 95%;
+        width: 91%;
+      }
+
+      h1 {
+        position: absolute;
+        color: white;
+        background-color: #ed2553;
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transform: translateY(85px);
+        transition: .2s ease;
+      }
+      
+      &:hover {
+        filter: drop-shadow(15px 12px 0 #ed2553);
+        transform: translateY(-10px);
+        opacity: 1;
+        transition: .5s ease;
+
+        h1 {
+          transform: translateY(10px);
+          opacity: 1;
+        }
+
+        img {
+          opacity: 1;
+        }
+
+        &:before {
+          opacity: 0;
+        }
+      }
+
+    }
+  }
+}
+
+//*~ Champions
+
+.wrapper_informations {
+  display: flex;
+
+  .image {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .informations {
+    padding: 0 1rem;
+  }
+
+  .information_skins {
+    .skins {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+
+      img {
+        width: 4.8rem;
+        margin: .1rem;
+      }
+    }
+  }
+}
